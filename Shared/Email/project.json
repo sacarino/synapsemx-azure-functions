@@ -1,0 +1,10 @@
+{
+  "frameworks": {
+    "net46":{
+      "dependencies": {
+        "Sendgrid" : "8.0.5",
+        "SendGrid.CSharp.HTTP.Client" : "3.0.0"
+      }
+    }
+   }
+}
