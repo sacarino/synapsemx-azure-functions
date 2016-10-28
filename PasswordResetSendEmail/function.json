@@ -1,13 +1,14 @@
 {
-    "disabled":false,
-    "bindings":[
-        {
-            "type": "serviceBusTrigger",
-            "direction": "in",
-            "name": "passwordResetEvent",
-            "topicName": "passwordresetevent",
-            "subscriptionName" : "azure-function",
-            "connection" : "service-bus-connection"
-        }
-    ]
+  "bindings": [
+    {
+      "type": "serviceBusTrigger",
+      "name": "message",
+      "topicName": "passwordresetevent",
+      "subscriptionName": "azure-function",
+      "connection": "service-bus-connection",
+      "accessRights": "Manage",
+      "direction": "in"
+    }
+  ],
+  "disabled": false
 }
