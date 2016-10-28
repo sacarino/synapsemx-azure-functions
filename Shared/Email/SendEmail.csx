@@ -1,5 +1,5 @@
 #r "SendGrid";
-# "SendGrid.CSharp.HTTP.Client";
+#r "SendGrid.CSharp.HTTP.Client";
 
 using SendGrid;
 using SendGrid.Helpers.Mail;
@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 public async static Task SendTemplateEmailAsync(string template, string to, string @from, Dictionary<string, string> data)
 {
-    var templates = new Dictionary<string,string>{
-        "InvitationToJoin" => "1c2871e7-411c-46a0-979b-970841d1e4ee",
-        "PasswordReset" => "1c2871e7-411c-46a0-979b-970841d1e4ee"
+    var templates = new Dictionary<string,string>()
+        .Add("InvitationToJoin","1c2871e7-411c-46a0-979b-970841d1e4ee")
+        .Add("PasswordReset", "1c2871e7-411c-46a0-979b-970841d1e4ee")
     };
 
     // lookup the templateId based on the template name
